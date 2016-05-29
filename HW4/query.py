@@ -1,0 +1,11 @@
+import PostgreSQL
+conn = PostgreSQL.connect('localhost','dbo','123456','hw04')
+cues2 = conn.cursor()
+curs2.execute('''CREATE TABLE B(sn VARCHAR(20) PRIMARY KEY,sn INT Name CHAR)''')
+curs2.excute('INSERT INTO B VALUES("40,B40")')
+curs2.excute('INSERT INTO B VALUES("50,B50")')
+curs2.excute('INSERT INTO B VALUES("60,B60")')
+curs2.excute('INSERT INTO B VALUES("70,B70")')
+curs2.excute('INSERT INTO B VALUES("80,B80")')
+check = conn.execute('SELECT * FROM B WHERE not exists(select 1 from A where A.ID=B.ID ')
+print(check)
